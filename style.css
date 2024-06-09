@@ -1,0 +1,553 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: white;
+    color: #002244;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed; /* Makes the header fixed */
+    top: 0; /* Sticks the header to the top of the page */
+    width: 100%; /* Ensures the header takes the full width of the viewport */
+    z-index: 1000; /* Keeps the header above other content */
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Aligns items on opposite ends */
+    align-items: center;
+}
+
+nav {
+    display: block;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #002244;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #04A4CC;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header-content h1 {
+    font-size: 30px;
+}
+
+h1 {
+    margin: 0; /* Removes margin around the h1 to tighten up header space */
+}
+
+
+section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #002244;
+    color: white;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+section#about {
+    background-color: #f4f7fa;
+    padding: 50px 20px; /* Increase padding for better spacing */
+    line-height: 1.8; /* Slightly more line spacing for readability */
+    font-size: 18px; /* Uniform font size for consistency */
+    color: #333; /* Darker text for better readability */
+    border-radius: 8px; /* Soft rounded corners for modern feel */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+section#about h2 {
+    font-family: 'Georgia', serif; /* More elegant font for headers */
+    color: #002244; /* Deep blue for a strong header */
+    font-size: 32px; /* Larger font size for the heading */
+    margin-bottom: 20px; /* More space below the heading */
+    text-transform: uppercase; /* Stylistic choice to make heading stand out */
+    letter-spacing: 1px; /* Spacing out letters a bit */
+}
+
+section#about p {
+    font-family: 'Arial', sans-serif; /* Sans-serif for body text readability */
+    text-align: justify; /* Justified text for a clean look */
+    background-color: #ffffff; /* Light background for the paragraph */
+    padding: 15px; /* Padding inside text block */
+    border-left: 5px solid #04A4CC; /* Accent line to the left */
+    margin: 20px 0; /* Margin around paragraphs for better flow */
+}
+
+/* Responsive enhancements for mobile views */
+@media (max-width: 768px) {
+    section#epbtabout h2 {
+        font-size: 24px; /* Smaller font size on mobile */
+    }
+
+    section#about p {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+}
+
+
+#hero {
+    width: 100%;
+    min-height: 40rem;
+    height: 90vh; /* Increased height from 70vh to 90vh */
+    background: url('cityskyline2.jpg') no-repeat center center;
+    background-size: cover; /* Ensure the background covers the full area */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.hero-image h2 {
+    text-align: center;
+    font-size: 2em;
+    max-width: 80%;
+    padding: 20px;
+    border-radius: 10px
+}
+
+h2 {
+    font-size: 32px; /* Larger font size for better visibility */
+    color: #ffffff; /* Bright white text */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Text shadow for better legibility against potentially complex backgrounds */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for the text background */
+    width: auto; /* Auto width based on text content */
+    max-width: 80%; /* Max width to maintain padding around text */
+    text-align: center; /* Centered text */
+}
+
+section#about h2, section#services h2 {
+    text-align: center; /* Ensures text is centered */
+    color: #002244; /* Specific color */
+    font-size: 28px; /* Uniform font size */
+    font-weight: bold; /* Bold font weight */
+    background-color: transparent; /* Ensures no background color interferes */
+    padding: 0; /* Removes any padding that might interfere */
+    margin: 0 auto; /* Centers the element and removes margin */
+    width: 100%; /* Ensures the header takes full width to align text properly */
+}
+
+/* Enhancing overall page aesthetics */
+body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5; /* A softer background outside the hero image */
+    color: #333333; /* Darker text for better readability */
+}
+
+footer {
+    background-color: white; /* Keeping footer consistent with the header */
+    color: grey;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Enhancing text readability and aesthetics */
+h2, p {
+    margin-bottom: 10px; /* Ensures space between headings and paragraphs */
+}
+
+h2 {
+    font-size: 28px; /* Larger font size for section titles */
+}
+
+p {
+    font-size: 18px; /* Readable text size for content */
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
+/* Styling for paragraphs in 'About' and 'Services' sections */
+/* Improved paragraph styling for 'About' and 'Services' sections */
+section#about p, section#services p {
+    font-size: 18px; /* Crisp, clear text size */
+    line-height: 1.9; /* Generous line height for easy reading */
+    color: #2f4f4f; /* Deep slate grey for a sophisticated look */
+    text-align: justify; /* Ensures even alignment of text */
+    padding: 20px 10%; /* Balanced padding for better text framing */
+    background-color: #fafafa; /* Very light grey background, subtle yet distinct */
+    margin: 30px 0; /* Slightly larger margin for more breathing room */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12); /* Deeper shadow for a 3D effect */
+    transition: all 0.3s ease-in-out; /* Smooth transitions for interactive elements */
+}
+
+/* Dynamic hover effects to enhance user interaction */
+section#about p:hover, section#services p:hover {
+    transform: translateY(-5px); /* Lifts the paragraph slightly to draw attention */
+    border-left-color: #48d1cc; /* Changes the border color to a lighter teal on hover */
+    background-color: #e0ffff; /* Light cyan background on hover for a refreshing visual change */
+}
+
+#bio {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#bio h2, #bio h3 {
+    color: #002244;
+}
+
+#bio p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.bio-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bio-text {
+    width: 60%;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.bio-text h2 {
+    background-color: #f9f9f9;
+}
+
+.bio-photo {
+    width: 35%;
+    padding-left: 20px;
+}
+
+#bio {
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+#bio h2, #bio h3 {
+    color: #002244;
+    margin-top: 0;
+}
+
+#bio p {
+    text-align: left;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+footer h4 {
+    color: black;
+}
+
+
+
+#phone-wrapper {
+    display: inline-flex;
+    align-items: center;
+}
+
+#phone-icon, #phone-number {
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+#phone-number {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: scale(0.95); // Start slightly scaled down
+}
+
+#phone-icon {
+    width: 24px; /* Adjust the size of the icon as needed */
+    height: 24px;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+    position: relative; /* Add relative positioning */
+    top: 4px; /* Move the icon down by 4px */
+}
+
+#mail-icon {
+    width: 24px; /* Adjust the size of the icon as needed */
+    height: 24px;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+    cursor: pointer;
+    position: relative; /* Add relative positioning */
+    top: 4px; /* Move the icon down by 4px */
+}
+
+
+
+.show-number {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hide-number {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.hide-icon {
+    display: none;
+    opacity: 0;
+}
+
+
+
+/* Enhancements for responsive design */
+@media (max-width: 768px) {
+    .bio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bio-text, .bio-photo {
+        width: 100%;
+        padding: 0;
+    }
+
+    .bio-photo {
+        margin-top: 20px;
+    }
+}
+
+section#services {
+    animation: slideInFromRight 1s ease-out forwards; /* Corrected animation name */
+    visibility: hidden; /* Ensure it starts as hidden */
+    background-color: #e1e5ea; /* Light gray background for differentiation */
+    padding: 50px 20px; /* Generous padding for ample space */
+    line-height: 1.8; /* Improved line height for readability */
+    font-size: 18px; /* Consistent font size across sections */
+    color: #333; /* Darker text for contrast and readability */
+    border-radius: 8px; /* Consistent rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for a subtle depth */
+}
+
+section#services h2 {
+    font-family: 'Georgia', serif; /* Elegant font for a professional look */
+    color: #002244; /* Maintaining color consistency with the 'About Us' section */
+    font-size: 32px; /* Large font size for clear section titles */
+    margin-bottom: 20px; /* Space below the header to separate from content */
+    text-transform: uppercase; /* Capital letters for emphasis */
+    letter-spacing: 1px; /* Space between letters for better legibility */
+}
+
+section#services p {
+    font-family: 'Arial', sans-serif; /* Clear and readable font for text */
+    text-align: justify; /* Alignment for a clean and formal presentation */
+    background-color: #ffffff; /* White background for text blocks to stand out */
+    padding: 15px; /* Comfortable padding around text */
+    border-right: 5px solid #04A4CC; /* Blue accent line on the right */
+    margin: 20px 0; /* Vertical spacing for better layout */
+}
+
+/* Responsive adjustments for a better mobile experience */
+@media (max-width: 768px) {
+    section#services h2 {
+        font-size: 24px; /* Smaller font size on smaller screens */
+    }
+
+    section#services p {
+        padding: 10px; /* Slightly reduced padding on smaller devices */
+    }
+}
+
+/* Initial state for animations */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply to specific sections */
+#about {
+    animation: slideInFromLeft 1s ease-out forwards;
+    visibility: hidden;
+}
+
+
+section#contact {
+    background-color: #f4f4f4; /* Light gray background for the section */
+    padding: 20px 0;
+    text-align: center;
+    color: #333; /* Ensuring the text color is visible against the light gray background */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Takes up all available space */
+    justify-content: center; /* Centers content vertically */
+    width: 100%; /* Full width */
+    margin-top: 60px; /* Adjust based on the height of your header */
+}
+
+section#contact h2 {
+    margin-top: 20px; /* Extra space at the top of the section */
+    color: #002244; /* Keeping the title in the theme color */
+    background-color: #fff; /* White background for the title to stand out */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px; /* Rounded corners for the title */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    position: relative;
+    top: -20px; /* Pulls the title up outside the gray box */
+    z-index: 100; /* Ensures it's above the form */
+}
+
+section#contact .container {
+    background-color: #e1e5ea; /* A different shade of gray for the container to make it stand out */
+    padding: 40px;
+    border-radius: 8px; /* Adds rounded corners to the form container */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Soft shadow for the form container */
+    width: 50rem; /* Fixed width regardless of screen size */
+    max-width: 100%; /* Ensures it doesn't exceed the width of smaller screens */
+    display: flex;
+    flex-direction: column; /* Ensures content within the container is aligned vertically */
+    align-items: center; /* Centers the items horizontally */
+    margin-bottom: 22rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Aligns form elements vertically */
+    width: 100%; /* Form takes full width of its container */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Spacing between rows */
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    flex: 1; /* Makes input fields take up equal space */
+    margin-right: 10px; /* Adds spacing between the fields in a row */
+    padding: 10px; /* Padding inside each input field for better text alignment */
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+input[type="text"]:last-child, input[type="tel"]:last-child {
+    margin-right: 0; /* Removes right margin from the last input in a row */
+}
+
+textarea {
+    width: 100%; /* Ensures textarea spans the full width */
+    height: 300px; /* Fixed height for the textarea */
+    padding: 10px; /* Consistent padding with input fields */
+    margin-bottom: 2rem; /* Spacing below the textarea */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button.submit-btn {
+    width: 30%; /* Button spans the full width of its container */
+    height: 3rem;
+    border-radius: 10px;
+    background-color: #04A4CC; /* Bright accent color */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 17rem;
+}
+
+button.submit-btn:hover {
+    background-color: #033d5a; /* Darkened accent color on hover */
+}
+
+/* Style adjustments for placeholder text and focus styles */
+input::placeholder, textarea::placeholder {
+    color: #bbb; /* Lighter color for placeholders */
+    opacity: 1; /* Ensure placeholders are always visible */
+}
+
+input:focus, textarea:focus {
+    border-color: #04A4CC; /* Highlight color when an element is focused */
+}
+
+.contact-us {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+.contact-us h1 {
+    font-size: 3rem;
+    color: #424242 ;
+}
+
+.contact-us span {
+    color: #033d5a;
+}
+
+.contact-p {
+    color: #333333;
+    margin-top: -1.5rem;
+}

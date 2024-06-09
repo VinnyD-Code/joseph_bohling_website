@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Bohling - Bio</title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e7f0f8;
+            height: 100%; /* Ensure the body takes up the full height */
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        header {
+            background-color: white;
+            color: #002244;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: 2.8rem;
+            display: flex;
+        }
+
+        .header-container {
+            width: 100%;
+            overflow: hidden; /* Keeps any internal overflow hidden */
+        }
+
+        .header-container h1 {
+            margin-right: 5rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center; /* Aligns items on opposite ends */
+            align-items: center;
+        }
+
+        nav {
+            display: block;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #002244;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #04A4CC;
+        }
+
+        main {
+            flex: 1; /* Ensure the main content takes up the available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgrey;
+        }
+
+        .main-container {
+            width: 70%; /* Ensures the container is wide enough */
+            margin: 20px auto; /* Center the container with top and bottom margin */
+            position: relative;
+        }
+
+        .joe-image {
+            text-align: center; /* Center the image */
+            margin: 20px 0; /* Add margin above and below the image */
+        }
+
+        .joe-image img {
+            max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+            height: auto; /* Maintain the image's aspect ratio */
+            border-radius: 10px; /* Add slightly rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+            border: 3px solid #024455; /* Add a border matching the header color */
+        }
+
+        .joe-image h2 {
+            margin-top: 10px; /* Add some space above the text */
+            font-size: 2rem; /* Larger font size for the name */
+            color: #024455; /* Matching the header color */
+            font-weight: bold; /* Make the text bold */
+            text-align: center; /* Center the text */
+        }
+
+        .container {
+            width: 100%;
+            overflow: hidden; /* Keeps any internal overflow hidden */
+        }
+
+        .bio-slider {
+            display: flex;
+            transition: transform 0.5s ease;
+            width: calc(50% * 2); /* Adjust width based on the total number of slides and slides per page */
+        }
+
+        .slide {
+            border: 2px solid #024455; /* Deep blue border to match your color scheme */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+            border-radius: 10px; /* Rounded corners */
+            flex: 0 0 calc(33.33% - 20px); /* Adjust width to account for margin */
+            box-sizing: border-box;
+            padding: 0;
+            background-color: #fff; /* White background for a clean look */
+            height: 25rem; /* Fixed height for each slide */
+            margin: 0 10px; /* Add margin to create gaps between slides */
+            position: relative; /* For positioning overlay */
+            overflow: hidden; /* Hide overflow content */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center the content vertically */
+            align-items: center; /* Center the content horizontally */
+            text-align: center; /* Center text alignment */
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the slide */
+            border-radius: 5px; /* Slightly round the corners of the image */
+        }
+
+        .slide h2 {
+            margin: 0; /* Remove any margin */
+            font-size: 1.5rem;
+            color: black; /* Color for text */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 10px;
+            border-radius: 5px; /* Slightly round the corners of the background */
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.75);
+        }
+
+        .slide p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left; /* Align text to the left */
+            opacity: 0;
+            transition: opacity 0.5s ease; /* Smooth transition */
+            line-height: 1.59; /* Add line height for readability */
+            padding: 20px; /* Add padding to ensure text doesn't touch the edges */
+            overflow-y: auto; /* Allow vertical scrolling if content overflows */
+            box-sizing: border-box; /* Ensure padding is included in the height */
+            letter-spacing: 0.5px; /* Adjust letter spacing */
+            word-spacing: 0.5px; /* Adjust word spacing for better readability */
+        }
+
+        .slide:hover p {
+            opacity: 1; /* Show on hover */
+        }
+
+        .slide:hover {
+            transform: translateY(-5px); /* Slightly lift the slide on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance the shadow on hover */
+        }
+
+        .slide .content {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background for content */
+            border-radius: 5px; /* Rounded corners for the content box */
+        }
+
+        .slide .title {
+            font-weight: bold;
+            color: #007bff; /* Blue color for title */
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            position: absolute;
+            top: 67%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0; /* Remove padding if not needed or adjust as necessary */
+            pointer-events: none; /* Prevents any mouse events on the control div itself */
+        }
+
+        .controls button {
+            border: none;
+            background-color: transparent;
+            color: #007bff;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            z-index: 100;
+            outline: none;
+            position: absolute; /* Ensure this remains */
+            pointer-events: auto; /* Enable pointer events on buttons only */
+        }
+
+        .controls button:first-child {
+            left: -40px; /* Increase or adjust this value to move the left arrow further outside */
+        }
+
+        .controls button:last-child {
+            right: -35px; /* Adjust right arrow if necessary */
+        }
+
+        .controls button:hover {
+            color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            color: black;
+        }
+
+        footer h4 {
+            color: black;
+        }
+
+
+
+        #phone-wrapper {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        #phone-icon, #phone-number {
+            cursor: pointer;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        #phone-number {
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            opacity: 0;
+            transform: scale(0.95); // Start slightly scaled down
+        }
+
+        #phone-icon {
+            width: 24px; /* Adjust the size of the icon as needed */
+            height: 24px;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+            cursor: pointer;
+            position: relative; /* Add relative positioning */
+            top: 4px; /* Move the icon down by 4px */
+        }
+
+        #mail-icon {
+            width: 24px; /* Adjust the size of the icon as needed */
+            height: 24px;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+            cursor: pointer;
+            position: relative; /* Add relative positioning */
+            top: 4px; /* Move the icon down by 4px */
+        }
+
+
+
+        .show-number {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .hide-number {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        .hide-icon {
+            display: none;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-container header-content">
+        <h1>Joseph E. Bohling and Associates (JEBA), LLC</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="main-container">
+        <div class="joe-image">
+            <img src="joseph%20bohling.jpg" alt="joseph bohling image">
+            <h2>Joseph E. Bohling</h2>
+        </div>
+        <div class="container">
+            <div class="bio-slider" id="bioSlider">
+                <div class="slide">
+                    <h2>Professional Experience</h2>
+                    <p>Joe's career includes key positions as Managing Partner and Chief Investor Relations Officer at Pilatus Capital; Managing Director and Member / Owner at Berkeley Research Group, LLC; Co-Founder of The Legacy Academy, a Division of BRG; Co-Founder and President of the Health Transformation Institute, a Subsidiary of BRG; and Chief Human Resources Officer for Aflac, Inc.</p>
+                </div>
+                <div class="slide">
+                    <h2>Diverse Expertise and Proven Impact</h2>
+                    <p>His broad and deep alternative investments, executive, operations, and human capital leadership and consulting experience has spanned numerous industries including e-commerce real estate, supply chain logistics, healthcare, higher education, manufacturing, high tech / clean tech / life science, insurance, financial services, consumer packaged goods, and telecommunications.</p>
+                </div>
+                <div class="slide">
+                    <h2>Extensive Client Portfolio</h2>
+                    <p>His prior assignments and clients have included Hyundai Motor Co., Renault-Nissan-Mitsubishi Alliance, Caterpillar, Vanderbilt University Health, Concentra - Humana, CitiFinancial Auto/Citigroup, PepsiCo/Frito Lay, Comcast Cable, Bridgeport/Yale-New Haven Health System, Parkland Medical Center, and Duke University Medical Center.</p>
+                </div>
+                <div class="slide">
+                    <h2>Proven Results</h2>
+                    <p>Throughout Joe's career, he has consistently delivered for his clients--utilizing a people centric consultative approach--significant cost savings ranging from 10%-30% improvements to the bottom-line and facilitating the process to grow top-line revenue in the range of 105%-200% from prior year performance.</p>
+                </div>
+                <div class="slide">
+                    <h2>Leadership</h2>
+                    <p>Joe is a regular presenter, speaker, and writer for national conferences, periodicals, and news sources expressing his thought leadership on a wide variety of topics ranging from Holistic Prosperity / Wealth Expansion, Intergenerational Wealth Transfer, Executive Coaching / Sustained Peak Performance, Talent Management and Leadership Development, Diversity, Inclusion, Belonging (DIB), Health and Wellness Initiatives, Health Benefits, Change Leadership Methodology, and Enhancing Employee Engagement.</p>
+                </div>
+                <div class="slide">
+                    <h2>Educational Background</h2>
+                    <p>Joe graduated with a Bachelor of Arts Degree from Colorado State University and a Juris Doctor from the University of Colorado School of Law. He has also served as a Board Member and President of the Executive Committee of the Colorado State University Alumni Association Board of Directors.</p>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button onclick="moveSlide(-1)">&#10094;</button>
+            <button onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <h4>CONTACT US
+                <a href="mailto:josephbohling@gmail.com" class="mail-wrapper">
+                    <img src="mailicon6.png" alt="Mail Icon" id="mail-icon">
+                </a>
+                <span id="phone-wrapper">
+                    <img src="phoneimg.png" alt="Phone Icon" id="phone-icon" onclick="togglePhoneNumber()">
+                    <span id="phone-number" onclick="togglePhoneNumber()">+1-214-435-8071</span>
+                </span>
+            </h4>
+            <p>© 2024 Joseph E. Bohling and Associates (JEBA), LLC. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    let currentSlide = 0;
+    const slidesPerPage = 3;
+
+    function moveSlide(direction) {
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        // Calculate the total number of sets
+        const totalSets = Math.ceil(totalSlides / slidesPerPage);
+
+        // Update the current slide index based on direction
+        currentSlide += direction;
+
+        // Ensure currentSlide wraps around correctly
+        if (currentSlide >= totalSets) {
+            currentSlide = 0; // Reset to first set of slides
+        } else if (currentSlide < 0) {
+            currentSlide = totalSets - 1; // Adjust to show the last set of slides
+        }
+
+        // Calculate the shift percentage for the transform
+        let shiftPercentage = currentSlide * 100;
+
+        // Apply the transformation to move the slides
+        document.getElementById('bioSlider').style.transform = `translateX(-${shiftPercentage}%)`;
+    }
+
+</script>
+</body>
+</html>
+

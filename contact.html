@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Joseph E. Bohling and Associates, LLC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container header-content">
+        <h1>Joseph E. Bohling and Associates (JEBA), LLC </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="contact">
+    <div class="contact-us"><h1>Contact <span>Us</span></h1></div>
+    <div class="container">
+        <p class="contact-p">If you have any questions please feel free to contact us using the form below.</p>
+        <form action="#" method="post">
+            <div class="form-row">
+                <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+            </div>
+            <div class="form-row">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+            </div>
+            <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <h4>CONTACT US
+                <a href="mailto:josephbohling@gmail.com" class="mail-wrapper">
+                    <img src="mailicon6.png" alt="Mail Icon" id="mail-icon">
+                </a>
+                <span id="phone-wrapper">
+                    <img src="phoneimg.png" alt="Phone Icon" id="phone-icon" onclick="togglePhoneNumber()">
+                    <span id="phone-number" onclick="togglePhoneNumber()">+1-214-435-8071</span>
+                </span>
+            </h4>
+            <p>© 2024 Joseph E. Bohling and Associates, LLC. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
