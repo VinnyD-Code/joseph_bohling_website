@@ -563,9 +563,8 @@ input:focus, textarea:focus {
     }
 
     .header-content h1 {
-        flex-direction: column;
-        align-items: flex-start;
         font-size: 5px;
+        margin-left: 3rem;
     }
 
     nav ul {
@@ -653,8 +652,9 @@ nav ul.show {
         align-items: flex-start;
     }
 
-    .header-content h1{
+    .header-content h1 {
         font-size: 5px;
+        margin-left: 3rem;
     }
 
     nav ul {
@@ -685,6 +685,7 @@ nav ul.show {
 
     .header-content h1 {
         font-size: 5px;
+        margin-left: 3rem;
     }
 
     .menu-icon {
