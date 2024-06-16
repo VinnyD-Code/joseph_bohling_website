@@ -576,6 +576,18 @@ input:focus, textarea:focus {
     }
 }
 
+/* Styles for the header and menu icon */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hide the menu links by default on mobile view */
+nav .nav-links {
+    display: flex;
+}
+
 /* Responsive adjustments for sections */
 @media (max-width: 768px) {
     section#about h2, section#services h2 {
@@ -604,5 +616,31 @@ input:focus, textarea:focus {
     button.submit-btn {
         width: 100%;
         margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide the nav links by default */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block; /* Show the hamburger icon */
+    }
+
+    nav ul.show {
+        display: flex; /* Show the nav links when toggled */
+        flex-direction: column;
     }
 }
