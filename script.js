@@ -39,8 +39,8 @@ function togglePhoneNumber() {
 }
 
 function toggleMenu() {
-    var menu = document.querySelector('nav ul');
-    menu.classList.toggle('show');
+    var navLinks = document.querySelector('nav .nav-links');
+    navLinks.classList.toggle('show');
 }
 
 

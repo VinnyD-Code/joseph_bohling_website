@@ -9,14 +9,17 @@
 <body>
 <header>
     <div class="container header-content">
-        <h1>Joseph E. Bohling and Associates (JEBA), LLC </h1>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <h1>Joseph E. Bohling and Associates (JEBA), LLC</h1>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About Us</a></li>
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="bio.html">Bio</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -26,7 +29,10 @@
     <div class="contact-us"><h1>Contact <span>Us</span></h1></div>
     <div class="container">
         <p class="contact-p">If you have any questions please feel free to contact us using the form below.</p>
-        <form action="#" method="post">
+        <form
+                action="https://formspree.io/f/mknddyqk"
+                method="POST"
+        >
             <div class="form-row">
                 <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
                 <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>

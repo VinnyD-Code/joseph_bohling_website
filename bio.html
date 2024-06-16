@@ -10,10 +10,13 @@
 </head>
 <body>
 <header>
-    <div class="header-container header-content">
+    <div class="container header-content">
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
         <h1>Joseph E. Bohling and Associates (JEBA), LLC</h1>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#about">About Us</a></li>
                 <li><a href="index.html#services">Services</a></li>
@@ -109,7 +112,10 @@
         // Apply the transformation to move the slides
         document.getElementById('bioSlider').style.transform = `translateX(-${shiftPercentage}%)`;
     }
-
+    function toggleMenu() {
+        var navLinks = document.querySelector('nav .nav-links');
+        navLinks.classList.toggle('show');
+    }
 </script>
 </body>
 </html>
