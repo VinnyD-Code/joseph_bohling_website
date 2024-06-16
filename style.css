@@ -551,3 +551,58 @@ input:focus, textarea:focus {
     color: #333333;
     margin-top: -1.5rem;
 }
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+}
+
+/* Responsive adjustments for sections */
+@media (max-width: 768px) {
+    section#about h2, section#services h2 {
+        font-size: 24px;
+    }
+
+    section#about p, section#services p {
+        padding: 10px;
+    }
+}
+
+/* Responsive adjustments for contact section */
+@media (max-width: 768px) {
+    .contact-us h1 {
+        font-size: 2rem;
+    }
+
+    section#contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    button.submit-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+}
