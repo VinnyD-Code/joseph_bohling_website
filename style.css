@@ -683,6 +683,10 @@ nav ul.show {
         align-items: flex-start;
     }
 
+    .header-content h1 {
+        font-size: 20px;
+    }
+
     .menu-icon {
         display: block; /* Show the hamburger icon */
     }
