@@ -160,9 +160,6 @@ main {
     margin: 0;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: left; /* Align text to the left */
     opacity: 0;
     transition: opacity 0.5s ease; /* Smooth transition */
@@ -172,7 +169,13 @@ main {
     box-sizing: border-box; /* Ensure padding is included in the height */
     letter-spacing: 0.5px; /* Adjust letter spacing */
     word-spacing: 0.5px; /* Adjust word spacing for better readability */
+    height: 100%; /* Ensure the paragraph takes up the full height of the slide */
 }
+
+.slide:hover p {
+    opacity: 1; /* Show on hover */
+}
+
 
 .slide:hover p {
     opacity: 1; /* Show on hover */
