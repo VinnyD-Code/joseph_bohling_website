@@ -90,6 +90,7 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
     border: 3px solid #024455; /* Add a border matching the header color */
     margin-bottom: 5rem;
+    margin-top: 5rem;
 }
 
 .joe-image h2 {
