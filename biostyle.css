@@ -90,6 +90,7 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
     border: 3px solid #024455; /* Add a border matching the header color */
     margin-bottom: 5rem;
+    margin-top: 5rem;
 }
 
 .joe-image h2 {
@@ -160,9 +161,6 @@ main {
     margin: 0;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: left; /* Align text to the left */
     opacity: 0;
     transition: opacity 0.5s ease; /* Smooth transition */
@@ -172,7 +170,13 @@ main {
     box-sizing: border-box; /* Ensure padding is included in the height */
     letter-spacing: 0.5px; /* Adjust letter spacing */
     word-spacing: 0.5px; /* Adjust word spacing for better readability */
+    height: 100%; /* Ensure the paragraph takes up the full height of the slide */
 }
+
+.slide:hover p {
+    opacity: 1; /* Show on hover */
+}
+
 
 .slide:hover p {
     opacity: 1; /* Show on hover */
@@ -236,10 +240,44 @@ footer {
     padding: 10px;
     background-color: white;
     color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    width: 100%; /* Ensure it takes full width */
+}
+
+.contact-container {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 100%;
 }
 
 footer h4 {
     color: black;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-left: 6rem; /* Remove any default margin */
+    margin-bottom: 0rem;
+
+}
+
+footer h4 img {
+    margin-left: 10px; /* Add some space between the text and icons */
+}
+
+
+footer p {
+    margin: 5px 0 0 0; /* Adjust margin for the paragraph below the h4 */
 }
 
 
