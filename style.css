@@ -109,7 +109,7 @@ section#about h2 {
 
 section#about p {
     font-family: 'Arial', sans-serif; /* Sans-serif for body text readability */
-    text-align: justify; /* Justified text for a clean look */
+    text-align: left;
     background-color: #ffffff; /* Light background for the paragraph */
     padding: 15px; /* Padding inside text block */
     border-left: 5px solid #04A4CC; /* Accent line to the left */
@@ -144,6 +144,7 @@ section#about p {
     text-align: center;
     font-size: 2em;
     max-width: 80%;
+    margin: 0 auto;
     padding: 20px;
     border-radius: 10px
 }
@@ -204,7 +205,7 @@ section#about p, section#services p {
     font-size: 18px; /* Crisp, clear text size */
     line-height: 1.9; /* Generous line height for easy reading */
     color: #2f4f4f; /* Deep slate grey for a sophisticated look */
-    text-align: justify; /* Ensures even alignment of text */
+    text-align: left;
     padding: 20px 10%; /* Balanced padding for better text framing */
     background-color: #fafafa; /* Very light grey background, subtle yet distinct */
     margin: 30px 0; /* Slightly larger margin for more breathing room */
@@ -423,7 +424,7 @@ section#services h2 {
 
 section#services p {
     font-family: 'Arial', sans-serif; /* Clear and readable font for text */
-    text-align: justify; /* Alignment for a clean and formal presentation */
+    text-align: left;
     background-color: #ffffff; /* White background for text blocks to stand out */
     padding: 15px; /* Comfortable padding around text */
     border-right: 5px solid #04A4CC; /* Blue accent line on the right */
