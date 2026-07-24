@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JEBA hero probe</title>
+<style>
+  :root {
+    --gold-decorative: #C9A227;
+    --gold-text: #8A6A18;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  header.site-header {
+    padding: 18px 24px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 48px 24px;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  @media (min-width: 900px) {
+    .hero-inner {
+      flex-direction: row;
+      align-items: center;
+      gap: 56px;
+    }
+  }
+  .hero-text {
+    text-align: left;
+    max-width: 640px;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+  }
+  .hero-text p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+  }
+  @media (min-width: 700px) {
+    .hero-text h1 { font-size: 2.6rem; }
+    .hero-text p { font-size: 1.15rem; }
+  }
+  .diagram-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .diagram-wrap svg {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    display: block;
+  }
+  @media (min-width: 900px) {
+    .diagram-wrap svg { max-width: 360px; }
+  }
+  .node-label {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  .hub-label {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  footer.site-footer {
+    padding: 20px 24px;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  /* ---- DARK THEME ---- */
+  body[data-theme="dark"] {
+    background: linear-gradient(160deg, #0d3b3b 0%, #0a1f3d 55%, #33192c 100%);
+    color: #ffffff;
+  }
+  body[data-theme="dark"] header.site-header { color: #ffffff; }
+  body[data-theme="dark"] .hero-text p { color: #e4e6ee; }
+  body[data-theme="dark"] .spoke-line { stroke: rgba(255,255,255,0.5); }
+  body[data-theme="dark"] .hub-circle { fill: var(--gold-decorative); }
+  body[data-theme="dark"] .hub-label { fill: #1a1a1a; }
+  body[data-theme="dark"] .node-circle { fill: #ffffff; }
+  body[data-theme="dark"] .node-label { fill: #ffffff; }
+  body[data-theme="dark"] footer.site-footer { color: #cfd2dc; border-top: 1px solid rgba(255,255,255,0.15); }
+
+  /* ---- LIGHT THEME ---- */
+  body[data-theme="light"] {
+    background: #FBF6EF;
+    color: #1A1A1A;
+  }
+  body[data-theme="light"] header.site-header { color: #1A1A1A; }
+  body[data-theme="light"] .hero-text p { color: #1A1A1A; }
+  body[data-theme="light"] .spoke-line { stroke: #0B2545; stroke-opacity: 0.55; }
+  body[data-theme="light"] .hub-circle { fill: var(--gold-decorative); }
+  body[data-theme="light"] .hub-label { fill: #1A1A1A; }
+  body[data-theme="light"] .node-circle { fill: #0B2545; }
+  body[data-theme="light"] .node-label { fill: #1A1A1A; }
+  body[data-theme="light"] footer.site-footer { color: #4a4a4a; border-top: 1px solid rgba(0,0,0,0.1); }
+</style>
+</head>
+<body data-theme="dark">
+
+<header class="site-header">Joseph E. Bohling and Associates (JEBA), LLC</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>Integrated orchestration that accelerates performance, strengthens governance, and elevates leadership.</h1>
+      <p>JEBA, LLC is a business transformation orchestrator that integrates specialized partners to help organizations accelerate performance, strengthen governance, and adopt new capabilities. We coordinate complex, multi-partner initiatives end-to-end&mdash;facilitating strategic programs, planning, project management, organizational development, and executive coaching&mdash;so leaders receive one synchronized team and a clean, defensible, scalable program.</p>
+    </div>
+
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 400 400" role="img" aria-label="JEBA orchestration hub with five service nodes: Program Orchestration, Strategic Planning, Project Management, Organizational Development, Executive Coaching">
+        <!-- spokes -->
+        <line class="spoke-line" x1="200" y1="200" x2="200" y2="72"  stroke-width="2"/>
+        <line class="spoke-line" x1="200" y1="200" x2="323" y2="118" stroke-width="2"/>
+        <line class="spoke-line" x1="200" y1="200" x2="278" y2="292" stroke-width="2"/>
+        <line class="spoke-line" x1="200" y1="200" x2="122" y2="292" stroke-width="2"/>
+        <line class="spoke-line" x1="200" y1="200" x2="77"  y2="118" stroke-width="2"/>
+
+        <!-- nodes -->
+        <circle class="node-circle" cx="200" cy="72"  r="7"/>
+        <circle class="node-circle" cx="323" cy="118" r="7"/>
+        <circle class="node-circle" cx="278" cy="292" r="7"/>
+        <circle class="node-circle" cx="122" cy="292" r="7"/>
+        <circle class="node-circle" cx="77"  cy="118" r="7"/>
+
+        <!-- labels: pushed purely along the hub->node axis (vertical for every
+             node here) so they clear both the node circle and the spoke, which
+             only spans hub->node and never extends past it. anchor=middle keeps
+             every label centered over its node's x, so growth from the larger
+             font stays symmetric and can't run into the viewBox edges. -->
+        <text class="node-label" x="200" y="29" text-anchor="middle">
+          <tspan x="200" dy="0">PROGRAM</tspan>
+          <tspan x="200" dy="19">ORCHESTRATION</tspan>
+        </text>
+        <text class="node-label" x="323" y="75" text-anchor="middle">
+          <tspan x="323" dy="0">STRATEGIC</tspan>
+          <tspan x="323" dy="19">PLANNING</tspan>
+        </text>
+        <text class="node-label" x="278" y="316" text-anchor="middle">
+          <tspan x="278" dy="0">PROJECT</tspan>
+          <tspan x="278" dy="19">MANAGEMENT</tspan>
+        </text>
+        <text class="node-label" x="122" y="316" text-anchor="middle">
+          <tspan x="122" dy="0">ORG</tspan>
+          <tspan x="122" dy="19">DEVELOPMENT</tspan>
+        </text>
+        <text class="node-label" x="77" y="75" text-anchor="middle">
+          <tspan x="77" dy="0">EXEC</tspan>
+          <tspan x="77" dy="19">COACHING</tspan>
+        </text>
+
+        <!-- hub -->
+        <circle class="hub-circle" cx="200" cy="200" r="46"/>
+        <text class="hub-label" x="200" y="206" text-anchor="middle">JEBA</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">&copy; 2026 Joseph E. Bohling and Associates (JEBA), LLC. All rights reserved.</footer>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const theme = params.get('theme') === 'light' ? 'light' : 'dark';
+  document.body.setAttribute('data-theme', theme);
+</script>
+</body>
+</html>
